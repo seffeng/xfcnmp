@@ -18,8 +18,8 @@ function fun_ins_pureftpd(){
     fi
     ##依次命令
     pureftpd_shl=(
-        "cp -f ${url_install_base}mysql/lib/libmysql* /usr/lib/"
-        "if [ -d "/usr/lib64/" ] ; then (cp -f ${url_install_base}mysql/lib/libmysql* /usr/lib64/) fi"
+        "rm -f /usr/lib/libmysql* && ln -s ${url_install_base}mysql/lib/libmysql* /usr/lib/"
+        "if [ -d "/usr/lib64/" ] ; then (rm -f /usr/lib64/libmysql* && ln -s ${url_install_base}mysql/lib/libmysql* /usr/lib64/) fi"
         "cd ${url_software_base}"
         "tar jxf ${pureftpd_pack_name}"
         "cd ${pureftpd_pack_folder}"

@@ -29,6 +29,6 @@ function fun_ins_bzip2(){
         fi
         let i++
     done
-    println "-- INSTALL BZIP2 FINISH";
+    println "-- INSTALL bzip2 FINISH";
     println "================================================================================\n" yellow;
 }
