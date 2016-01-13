@@ -14,7 +14,7 @@ function fun_ins_openssl(){
     fi
     ##依次命令
     openssl_shl=(
-        "yum -y install perl"
+        "yum -y install perl openssl-devel"
         "cd ${url_software_base}"
         "tar zxf ${openssl_pack_name}"
         "cd ${openssl_pack_folder}"

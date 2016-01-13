@@ -4,6 +4,14 @@ function fun_ins_scons(){
     println "-- INSTALL SCONS [START]";
     ##是否调试模式
     scons_is_debug=${is_debug};
+    scons_ins_prefix="${url_software_base}${scons_pack_name}";
+    if [ 0 = $scons_is_debug ]; then 
+        if [ -d "${mhash_ins_prefix}" ] ; then 
+            println "-- SCONS IS UNCOMPRESSION";
+            println "-- REINSTALL PLEASE DELETE [rm -rf ${scons_ins_prefix}]" red;
+            return 0;
+        fi
+    fi
     ##依次命令
     scons_shl=(
         "yum -y install python"

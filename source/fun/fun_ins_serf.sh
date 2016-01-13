@@ -18,6 +18,7 @@ function fun_ins_serf(){
     fi
     ##依次命令
     serf_shl=(
+        "yum -y install openssl-devel"
         "cd ${url_software_base}"
         "tar jxf ${serf_pack_name}"
         "cd ${serf_pack_folder}"

@@ -203,6 +203,13 @@ ins_sqlite=1;
 ins_serf=1;
 fi
 
+if [ 1 = $ins_serf ]; then
+ins_apr=1;
+ins_apr_util=1;
+ins_scons=1;
+ins_openssl=1;
+fi
+
 if [ 1 = $help ]; then
 println "${url_software_base}install.sh --url_software_base=${url_software_base} --url_install_base=${url_install_base} --url_config_base=${url_config_base} --url_data_base=${url_data_base} --is_debug=1" blues;
 exit;
