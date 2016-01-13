@@ -9,10 +9,10 @@
     /srv/websrv/source/install.sh --help=1
 
 ######5、安装命令参数解释；nginx 和 mysql 可单独安装，安装 php 时需先安装 mysql，或修改 /srv/websrv/source/fun/fun_ins_php.sh, 修改 ./configure --with-mysql --with-mysqli 相关项后再安装。
-    url_software_base  [安装源码路径, 默认：/srv/websrv/source/]
-    url_install_base   [安装程序路径, 默认：/srv/websrv/program/]
-    url_config_base    [配置文件路径, 默认：/srv/websrv/config/]
-    url_data_base      [数据文件路径, 默认：/srv/websrv/data/]
+    url_software_base  [安装源码路径, 默认：/srv/websrv/source/] [最后带 /]
+    url_install_base   [安装程序路径, 默认：/srv/websrv/program/][最后带 /]
+    url_config_base    [配置文件路径, 默认：/srv/websrv/config/] [最后带 /]
+    url_data_base      [数据文件路径, 默认：/srv/websrv/data/]   [最后带 /]
     is_debug         [0-开始安装；1-查看安装过程命令]
     ins_nginx        [1-安装nginx]
     ins_mysql        [1-安装mysql]

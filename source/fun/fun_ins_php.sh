@@ -17,12 +17,12 @@ function fun_ins_php(){
     fi
     ##依次命令
     php_shl=(
-        "yum -y install patch gzip freetype-devel bzip2-devel libcurl-devel libxml2-devel curl-devel libjpeg-devel libpng-devel curl-devel libevent-devel mysql-devel"
+        "yum -y install patch gzip freetype-devel bzip2-devel libcurl-devel libxml2-devel curl-devel libjpeg-devel libpng-devel libevent-devel mysql-devel"
         "cd ${url_software_base}"
         "mkdir -p ${php_etc_folder} ${php_log_folder}"
         "tar jxf ${php_pack_name}"
         "cd ${php_pack_folder}"
-        "./configure --prefix=${php_ins_prefix} --enable-fpm --with-fpm-user=www --with-fpm-group=wwww --with-config-file-path=${php_etc_folder} --enable-ftp --enable-zip --enable-sockets --enable-soap --enable-pcntl --enable-mbstring --enable-calendar --enable-exif --with-gd --with-curl --with-jpeg-dir --with-png-dir --with-openssl=${url_install_base}openssl --with-zlib --with-zlib-dir=${url_install_base}zlib --with-xmlrpc --with-libxml-dir --with-freetype-dir --with-mcrypt=${url_install_base}libmcrypt --with-bz2 --with-pdo-mysql=mysqlnd --with-mysqli=${url_install_base}mysql/bin/mysql_config"
+        "./configure --prefix=${php_ins_prefix} --enable-fpm --with-fpm-user=www --with-fpm-group=wwww --with-config-file-path=${php_etc_folder} --enable-ftp --enable-zip --enable-sockets --enable-soap --enable-pcntl --enable-mbstring --enable-calendar --enable-exif --with-gd --with-curl --with-jpeg-dir --with-png-dir --with-openssl=${url_install_base}openssl --with-zlib --with-zlib-dir=${url_install_base}zlib --with-xmlrpc --with-libxml-dir --with-freetype-dir --with-mcrypt=${url_install_base}libmcrypt --with-bz2 --with-pdo-mysql=mysqlnd --with-mysqli=mysqlnd"
         "make"
         "make install"
         "if [ ! -f "${php_etc_folder}/php.ini" ] ; then (cp php.ini-development ${php_etc_folder}/php.ini) fi"
