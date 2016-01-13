@@ -54,4 +54,6 @@
     /srv/websrv/config/php/stop.sh
     /srv/websrv/config/php/reload.sh
 
-14 更多版本[下载](http://pan.baidu.com/s/1eQmwv2E#path=%252Flinux%252Fweb_tool)
+14、配置文件可参考此文件夹内 config/ 文件夹里的对应配置；若本程序安装路径为 /srv/websrv/ 可直接覆盖配置文件。
+
+15、更多版本[下载](http://pan.baidu.com/s/1eQmwv2E#path=%252Flinux%252Fweb_tool)
