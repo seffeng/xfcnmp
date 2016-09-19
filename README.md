@@ -8,20 +8,20 @@
 ######4、安装命令查看。
     /srv/websrv/source/install.sh --help=1
 
-######5、安装命令参数解释；nginx 和 mysql 可单独安装，安装 php 时需先安装 mysql，或修改 /srv/websrv/source/fun/fun_ins_php.sh, 修改 ./configure --with-mysql --with-mysqli 相关项后再安装。
+######5、安装命令参数解释。
     url_software_base  [安装源码路径, 默认：/srv/websrv/source/] [最后带 /]
     url_install_base   [安装程序路径, 默认：/srv/websrv/program/][最后带 /]
     url_config_base    [配置文件路径, 默认：/srv/websrv/config/] [最后带 /]
     url_data_base      [数据文件路径, 默认：/srv/websrv/data/]   [最后带 /]
-    is_debug         [0-开始安装；1-查看安装过程命令]
-    ins_nginx        [1-安装nginx]
-    ins_mysql        [1-安装mysql]
-    ins_php          [1-安装php]
-    ins_pureftpd     [1-安装ftp]
-    ins_redis        [1-安装redis]
-    ins_subversion   [1-安装svn]
-    ins_php_memcache [1-安装php_memcache]
-    ins_memcached    [1-安装memcached]
+    is_debug           [0-开始安装；1-查看安装过程命令]
+    ins_nginx          [1-安装nginx]
+    ins_mysql          [1-安装mysql]
+    ins_php            [1-安装php]
+    ins_pureftpd       [1-安装ftp]
+    ins_redis          [1-安装redis]
+    ins_subversion     [1-安装svn]
+    ins_php_memcache   [1-安装php_memcache]
+    ins_memcached      [1-安装memcached]
 
 ######6、执行安装命令。
     /srv/websrv/source/install.sh --url_software_base=/srv/websrv/source/ --url_install_base=/srv/websrv/program/ --url_config_base=/srv/websrv/config/ --url_data_base=/srv/websrv/data/ --is_debug=0 --ins_nginx=1 --ins_mysql=1 --ins_php=1
