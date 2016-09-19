@@ -27,9 +27,9 @@
     /srv/websrv/source/install.sh --url_software_base=/srv/websrv/source/ --url_install_base=/srv/websrv/program/ --url_config_base=/srv/websrv/config/ --url_data_base=/srv/websrv/data/ --is_debug=0 --ins_nginx=1 --ins_mysql=1 --ins_php=1
 
 ######7、程序版本介绍，详细查看 /srv/websrv/source/ 下文件。
-    nginx-1.8.0
-    mysql-5.5.47
-    php-7.0.2
+    nginx-1.10.1
+    mysql-5.7.15
+    php-7.0.11
     pure-ftpd-1.0.36
     subversion-1.8.15
 
@@ -47,13 +47,21 @@
     /srv/websrv/config/memcached/start.sh
     /srv/websrv/config/memcached/stop.sh
 
-######12、mysql密码：root 或 空。
+######12、mysql密码：空 或 root。
+    请自行修改密码：
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+    flush privileges;
 
-######13、php-fpm 启动、停止、重载模版：
+######13、php-fpm 启动、停止、重载模版，启动php前请注意修改 /srv/websrv/config/php/php-fpm.conf。
     /srv/websrv/config/php/start.sh
     /srv/websrv/config/php/stop.sh
     /srv/websrv/config/php/reload.sh
 
 ######14、配置文件可参考此文件夹内 config/ 文件夹里的对应配置；若本程序安装路径为 /srv/websrv/ 可直接覆盖配置文件。
 
-######15、更多版本[下载](http://pan.baidu.com/s/1sk0AYVN#path=%252Fsoftware%252Fweb_tool)
+######15、更新软件
+    15.1 下载对应程序源码包，注意源码压缩类型；
+    15.2 修改 /install.sh 里对应的软件版本；
+    15.3 mysql 需下载 mysql-boost 版本，同时修改 install.sh 里的 boost_pack_folder 和 mysql_pack_folder。
+
+######16、更多版本[下载](http://pan.baidu.com/s/1sk0AYVN#path=%252Fsoftware%252Fweb_tool)
