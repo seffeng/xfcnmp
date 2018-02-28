@@ -49,8 +49,10 @@
 
 12、mysql密码：空 或 root。
     请自行修改密码：
+```
     ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
     flush privileges;
+```
 
 13、php-fpm 启动、停止、重载模版，启动php前请注意修改 /srv/websrv/config/php/php-fpm.conf。
     /srv/websrv/config/php/start.sh
