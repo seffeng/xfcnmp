@@ -55,8 +55,7 @@ chmod +x /srv/websrv/source/install.sh
     /srv/websrv/config/memcached/start.sh
     /srv/websrv/config/memcached/stop.sh
 
-#### 12、mysql密码：空 或 root。
-    请自行修改密码：
+#### 12、mysql密码：空 或 root。请自行修改密码：
 ```
     ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
     flush privileges;
