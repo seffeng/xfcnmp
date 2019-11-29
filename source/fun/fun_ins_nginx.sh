@@ -5,9 +5,9 @@ function fun_ins_nginx(){
     ##是否调试模式
     nginx_is_debug=${is_debug};
     nginx_ins_prefix="${url_install_base}nginx";
-    pcre_ins_source="${url_software_base}${pcre_pack_folder}";
-    openssl_ins_source="${url_software_base}${openssl_pack_folder}";
-    zlib_ins_source="${url_software_base}${zlib_pack_folder}";
+    pcre_mod_source="${url_software_base}${pcre_pack_folder}";
+    openssl_mod_source="${url_software_base}${openssl_pack_folder}";
+    zlib_mod_source="${url_software_base}${zlib_pack_folder}";
     nginx_ins_group="wwww";
     nginx_ins_user="www";
     nginx_conf_folder="${url_config_base}nginx";
@@ -38,7 +38,7 @@ function fun_ins_nginx(){
         "mkdir -p ${nginx_conf_folder}"
         "groupmems -g ${nginx_ins_group} > /dev/null 2>&1 || groupadd ${nginx_ins_group}"
         "id ${nginx_ins_user} > /dev/null 2>&1 || useradd -M -s /sbin/nologin -g ${nginx_ins_group} ${nginx_ins_user}"
-        "./configure --prefix=${nginx_ins_prefix} --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_stub_status_module --with-ipv6 --with-mail --with-mail_ssl_module --with-pcre=${pcre_ins_source} --with-openssl=${openssl_ins_source} --with-zlib=${zlib_ins_source} --conf-path=${nginx_confs_file} --group=${nginx_ins_group} --user=${nginx_ins_user} --error-log-path=${nginx_logs_folder}/error.log --http-log-path=${nginx_logs_folder}/access.log --pid-path=${nginx_logs_folder}/pid.txt --lock-path=${nginx_logs_folder}/lock.txt --with-ld-opt=\"-Wl,-rpath,/usr/local/lib\" --add-module=${url_software_base}${ngx_devel_kit_pack_folder} --add-module=${url_software_base}${misc_mod_pack_folder} --add-module=${url_software_base}${redis_mod_pack_folder} --add-module=${url_software_base}${lua_mod_pack_folder}"
+        "./configure --prefix=${nginx_ins_prefix} --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_stub_status_module --with-ipv6 --with-mail --with-mail_ssl_module --with-pcre=${pcre_mod_source} --with-openssl=${openssl_mod_source} --with-zlib=${zlib_mod_source}  --conf-path=${nginx_confs_file} --group=${nginx_ins_group} --user=${nginx_ins_user} --error-log-path=${nginx_logs_folder}/error.log --http-log-path=${nginx_logs_folder}/access.log --pid-path=${nginx_logs_folder}/pid.txt --lock-path=${nginx_logs_folder}/lock.txt --with-ld-opt=\"-Wl,-rpath,/usr/local/lib\" --add-module=${url_software_base}${ngx_devel_kit_pack_folder} --add-module=${url_software_base}${misc_mod_pack_folder} --add-module=${url_software_base}${redis_mod_pack_folder} --add-module=${url_software_base}${lua_mod_pack_folder}"
         "make"
         "make install"
         "if [ -f "${nginx_sbin_prefix}" ] ; then (rm -rf ${nginx_sbin_prefix}) fi"

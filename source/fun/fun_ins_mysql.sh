@@ -12,8 +12,8 @@ function fun_ins_mysql(){
     mysql_ins_user="mysql";
     mysql_ins_group="mysqls";
     mysql_defaut_port="3306";
-    mysql_defaut_charset="utf8";
-    mysql_defaut_collation="utf8_general_ci";
+    mysql_defaut_charset="utf8mb4";
+    mysql_defaut_collation="utf8mb4_general_ci";
     if [ 0 = $mysql_is_debug ]; then 
         if [ -f "${mysql_ins_prefix}/bin/mysql" ] ; then 
             println "-- MYSQL IS INSTALL";
@@ -40,8 +40,6 @@ function fun_ins_mysql(){
         "chmod 755 /etc/init.d/mysql.server"
         "if [ -f "/etc/my.cnf" ] ; then (mv /etc/my.cnf /etc/my.cnf.bak) fi"
         "if [ -f "/etc/mysql/my.cnf" ] ; then (mv /etc/mysql/my.cnf /etc/mysql/my.cnf.bak) fi"
-        "cp -f ./support-files/my-default.cnf ${mysql_config_folder}/my.cnf"
-        "chmod 0644 ${mysql_config_folder}/my.cnf"
         "${mysql_ins_prefix}/bin/mysqld --initialize-insecure --user=${mysql_ins_user} --basedir=${mysql_ins_prefix} --datadir=${mysql_ins_data}"
         "${mysql_ins_prefix}/bin/mysql_ssl_rsa_setup --datadir=${mysql_ins_data}"
         "${mysql_ins_prefix}/bin/mysqld_safe --user=${mysql_ins_user} &"

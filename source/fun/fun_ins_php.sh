@@ -4,8 +4,8 @@ function fun_ins_php(){
     println "-- INSTALL PHP(PHP-FPM) [START]";
     ##是否调试模式
     php_is_debug=${is_debug};
-    php_ins_prefix="${url_install_base}php";
-    php_etc_folder="${url_config_base}php";
+    php_ins_prefix="${url_install_base}php/7.3";
+    php_etc_folder="${url_config_base}php/7.3";
     php_log_folder="${php_etc_folder}/log";
     php_sbin_prefix="${url_sbin_base}php";
     if [ 0 = $php_is_debug ]; then 
@@ -17,7 +17,7 @@ function fun_ins_php(){
     fi
     ##依次命令
     php_shl=(
-        "yum -y install patch gzip freetype-devel bzip2-devel libcurl-devel libxml2-devel curl-devel libjpeg-devel libpng-devel libevent-devel mysql-devel"
+        "yum -y install patch gzip freetype-devel bzip2-devel libcurl-devel libxml2-devel curl-devel libzip-devel libjpeg-devel libpng-devel libevent-devel mysql-devel"
         "cd ${url_software_base}"
         "mkdir -p ${php_etc_folder} ${php_log_folder}"
         "tar jxf ${php_pack_name}"

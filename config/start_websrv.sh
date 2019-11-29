@@ -16,4 +16,4 @@
 # /srv/websrv/config/redis/start.sh
 
 # 停用防火墙
-systemctl stop firewalld.service
+# systemctl stop firewalld.service
