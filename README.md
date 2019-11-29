@@ -7,6 +7,12 @@
 ###### 3、程序版本介绍，软件安装包请自行下载，或[下载可安装包](https://pan.baidu.com/s/1i5PA2yT)
 
 ```shell
+# 主要安装软件：
+mysql-5.7.28
+nginx-1.16.1
+php-7.1.33
+redis-5.0.5
+# 完整文件名及相关依赖软件
 cmake-3.16.0.tar.gz
 libmcrypt-2.5.8.tar.gz
 libzip-1.5.2.tar.gz
@@ -18,7 +24,7 @@ mysql-boost-5.7.28.tar.gz
 nginx-1.16.1.tar.gz
 ngx_devel_kit-0.3.1.tar.gz
 openssl-1.0.2t.tar.gz
-pcre-8.43.tar.gz
+pcre-8.43.tar.bz2
 php-7.1.33.tar.bz2
 redis2-nginx-module-0.15.tar.gz
 redis-5.0.5.tar.gz
@@ -61,7 +67,7 @@ ins_redis          [1-安装redis]
 /srv/websrv/config/redis/stop.sh
    ```
 
-###### 9、mysql密码：空 或 root。
+###### 9、MySQL账号：root；密码：空 或 root。
 
 ```shell
 # 请自行修改密码：
@@ -77,12 +83,21 @@ flush privileges;
 /srv/websrv/config/php/reload.sh
 ```
 
-###### 11、配置文件可参考此文件夹内 config/ 文件夹里的对应配置；若本程序安装路径为 /srv/websrv/ 可直接覆盖配置文件。
+###### 11、总启动脚本。
 
-###### 12、更新软件
+```
+/srv/websrv/config/start_websrv.sh
+/srv/websrv/config/stop_websrv.sh
+```
+
+###### 12、配置文件可参考此文件夹内 config/ 文件夹里的对应配置；若本程序安装路径为 /srv/websrv/ 可直接覆盖配置文件。
+
+###### 13、更新软件
 ​    15.1 下载对应程序源码包，注意源码压缩类型；
+
 ​    15.2 修改 /install.sh 里对应的软件版本；
+
 ​    15.3 mysql 需下载 mysql-boost 版本，同时修改 install.sh 里的 boost_pack_folder 和 mysql_pack_folder。
 
-###### 13、更多版本[下载](https://pan.baidu.com/s/1i5PA2yT)
+###### 14、更多版本[下载](https://pan.baidu.com/s/1i5PA2yT)
 
