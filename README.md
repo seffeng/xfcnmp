@@ -1,10 +1,10 @@
 # CentOS xfcnmp
 
-#### 1、对应的文件夹名可以自行修改，本程序仅在 CentOS 7.7 上测试安装成功。
+#### 1、对应的文件夹名可以自行修改，本程序仅在 CentOS 7.4 和 CentOS 7.7 上测试安装成功。
 
 #### 2、文件夹(xfcnmp)建议放在 /srv/ 目录，并改名为 websrv ；所有配置文件关联路径为 /srv/websrv/， 若程序安装在其他目录，请自行修改相关配置文件。
 
-#### 3、程序版本介绍，软件安装包请自行下载（放到 /srv/source/ 目录），或[下载完整安装包](https://pan.baidu.com/s/1i5PA2yT)
+#### 3、程序版本介绍，软件安装包请自行下载（放到 /srv/source/ 目录），或[下载完整安装包](https://pan.baidu.com/s/1i5PA2yT#list/path=%2Fsharelink2958561331-535926987262596%2Fweb_tool%2Fcentos&parentPath=%2Fsharelink2958561331-535926987262596)
 
 ###### 3.1 主要安装软件
 
@@ -55,7 +55,7 @@ redis-5.0.7
 ```shell
 $ sudo chmod +x /srv/xfcnmp/source/install.sh
 ```
-#### 5、安装命令查看。
+#### 5、安装命令参考查看（注意实际路径）。
 
 ```shell
 $ sudo /srv/xfcnmp/source/install.sh --help=1
@@ -75,13 +75,13 @@ ins_php            [1-安装php]
 ins_redis          [1-安装redis]
 ```
 
-#### 7、执行安装命令。
+#### 7、安装命令参考。
    ```shell
 # 下载完整安装包：
-$ sudo cp xfcnmp_p7.1.33.tar.gz  /srv/
+$ sudo cp xfcnmp_p7.1.33.tar.gz /srv/
 $ cd /srv/
 $ sudo tar -zxf xfcnmp_p7.1.33.tar.gz
-$ sudo /srv/xfcnmp/source/install.sh --url_software_base=/srv/xfcnmp/source/ --url_install_base=/srv/websrv/program/ --url_config_base=/srv/websrv/config/ --url_data_base=/srv/websrv/data/ --ins_nginx=1 --ins_mysql=1 --ins_php=1 -is_debug=0 
+$ sudo /srv/xfcnmp/source/install.sh --url_software_base=/srv/xfcnmp/source/ --url_install_base=/srv/websrv/program/ --url_config_base=/srv/websrv/config/ --url_data_base=/srv/websrv/data/ --ins_nginx=1 --ins_mysql=1 --ins_php=1 --ins_redis=0 --is_debug=0
    ```
 
 #### 8、redis 启动、停止模版，注意 redis.conf 里的 daemonize 值为 yes 和 pidfile 路径：
