@@ -2,7 +2,7 @@
 
 #### 1、对应的文件夹名可以自行修改，本程序仅在 CentOS 7.4 和 CentOS 7.7 上测试安装成功。
 
-#### 2、文件夹(xfcnmp)建议放在 /srv/ 目录，并改名为 websrv ；所有配置文件关联路径为 /srv/websrv/， 若程序安装在其他目录，请自行修改相关配置文件。
+#### 2、文件夹(xfcnmp)建议放在 /srv/ 目录 ；所有配置文件关联路径为 /srv/websrv/， 若程序安装在其他目录，请自行修改相关配置文件。
 
 #### 3、程序版本介绍，软件安装包请自行下载（放到 /srv/source/ 目录），或[下载完整安装包](https://pan.baidu.com/s/1i5PA2yT#list/path=%2Fsharelink2958561331-535926987262596%2Fweb_tool%2Fcentos&parentPath=%2Fsharelink2958561331-535926987262596)
 
