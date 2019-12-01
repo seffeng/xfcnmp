@@ -15,7 +15,7 @@ function fun_ins_libmcrypt(){
     ##依次命令
     libmcrypt_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${libmcrypt_pack_name}"
+        "tar -zxf ${libmcrypt_pack_name}"
         "cd ${libmcrypt_pack_folder}"
         "./configure --prefix=${libmcrypt_ins_prefix}"
         "make"

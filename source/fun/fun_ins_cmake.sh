@@ -16,7 +16,7 @@ function fun_ins_cmake(){
     ##依次命令
     cmake_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${cmake_pack_name}"
+        "tar -zxf ${cmake_pack_name}"
         "cd ${cmake_pack_folder}"
         "./configure --prefix=${cmake_ins_prefix}"
         "make"

@@ -15,7 +15,7 @@ function fun_ins_mhash(){
     ##依次命令
     mhash_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${mhash_pack_name}"
+        "tar -zxf ${mhash_pack_name}"
         "cd ${mhash_pack_folder}"
         "./configure --prefix=${mhash_ins_prefix}"
         "make"

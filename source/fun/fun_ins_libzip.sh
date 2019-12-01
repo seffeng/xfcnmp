@@ -4,22 +4,14 @@ function fun_ins_libzip(){
     println "-- INSTALL LIBZIP [START]";
     ##是否调试模式
     libzip_is_debug=${is_debug};
-    libzip_ins_prefix="${url_install_base}libzip";
-    if [ 0 = $libzip_is_debug ]; then 
-        if [ -d "${libzip_ins_prefix}" ] ; then 
-            println "-- LIBZIP IS INSTALL" red;
-            println "-- REINSTALL PLEASE DELETE [rm -rf ${libzip_ins_prefix}]" red;
-            return 0;
-        fi
-    fi
     ##依次命令
     libzip_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${libzip_pack_name}"
+        "tar -zxf ${libzip_pack_name}"
         "cd ${libzip_pack_folder}"
         "mkdir -p build"
         "cd build"
-        "cmake -DCMAKE_INSTALL_PREFIX=${libzip_ins_prefix} .."
+        "cmake .."
         "make"
         "make install"
     );

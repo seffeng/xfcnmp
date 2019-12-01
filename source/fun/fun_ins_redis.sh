@@ -16,7 +16,7 @@ function fun_ins_redis(){
     ##依次命令
     redis_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${redis_pack_name}"
+        "tar -zxf ${redis_pack_name}"
         "cp -R ${redis_pack_folder} ${redis_ins_prefix}"
         "cd ${redis_ins_prefix}"
         "mkdir -p ${redis_conf_folder}"

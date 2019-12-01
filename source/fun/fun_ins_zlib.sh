@@ -15,7 +15,7 @@ function fun_ins_zlib(){
     ##依次命令
     zlib_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${zlib_pack_name}"
+        "tar -zxf ${zlib_pack_name}"
         "cd ${zlib_pack_folder}"
         "./configure --prefix=${zlib_ins_prefix}"
         "make"

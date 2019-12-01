@@ -25,7 +25,7 @@ function fun_ins_mysql(){
     mysql_shl=(
         "yum -y install ncurses-devel mysql-devel"
         "cd ${url_software_base}"
-        "tar zxf ${mysql_pack_name}"
+        "tar -zxf ${mysql_pack_name}"
         "cd ${mysql_pack_folder}"
         "mkdir -p ${mysql_config_folder}"
         "groupmems -g ${mysql_ins_group} > /dev/null 2>&1 || groupadd ${mysql_ins_group}"

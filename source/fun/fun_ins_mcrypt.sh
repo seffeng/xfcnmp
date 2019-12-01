@@ -15,7 +15,7 @@ function fun_ins_mcrypt(){
     ##依次命令
     mcrypt_shl=(
         "cd ${url_software_base}"
-        "tar zxf ${mcrypt_pack_name}"
+        "tar -zxf ${mcrypt_pack_name}"
         "cd ${mcrypt_pack_folder}"
         "export LD_LIBRARY_PATH=${url_install_base}libmcrypt/lib:${url_install_base}mhash/lib"
         "export LDFLAGS=\"-L${url_install_base}mhash/lib/ -I${url_install_base}mhash/include/\""

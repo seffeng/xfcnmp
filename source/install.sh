@@ -135,7 +135,7 @@ redis_pack_folder="redis-5.0.5";
 cmake_pack_name="${cmake_pack_folder}.tar.gz";
 libzip_pack_name="${libzip_pack_folder}.tar.gz";
 openssl_pack_name="${openssl_pack_folder}.tar.gz";
-pcre_pack_name="${pcre_pack_folder}.tar.bz2";
+pcre_pack_name="${pcre_pack_folder}.tar.gz";
 zlib_pack_name="${zlib_pack_folder}.tar.gz";
 
 ## MYSQL ---------------
@@ -152,7 +152,7 @@ redis_mod_pack_name="${redis_mod_pack_folder}.tar.gz";
 ## / nginx 模块---------------
 
 ## PHP 模块---------------
-php_pack_name="${php_pack_folder}.tar.bz2";
+php_pack_name="${php_pack_folder}.tar.gz";
 libmcrypt_pack_name="${libmcrypt_pack_folder}.tar.gz";
 mcrypt_pack_name="${mcrypt_pack_folder}.tar.gz";
 mhash_pack_name="${mhash_pack_folder}.tar.gz";

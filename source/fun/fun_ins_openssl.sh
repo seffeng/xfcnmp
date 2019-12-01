@@ -16,7 +16,7 @@ function fun_ins_openssl(){
     openssl_shl=(
         "yum -y install perl openssl-devel"
         "cd ${url_software_base}"
-        "tar zxf ${openssl_pack_name}"
+        "tar -zxf ${openssl_pack_name}"
         "cd ${openssl_pack_folder}"
         "./config --prefix=${openssl_ins_prefix}"
         "make"

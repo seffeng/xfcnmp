@@ -15,7 +15,7 @@ function fun_ins_pcre(){
     ##依次命令
     pcre_shl=(
         "cd ${url_software_base}"
-        "tar jxf ${pcre_pack_name}"
+        "tar -zxf ${pcre_pack_name}"
         "cd ${pcre_pack_folder}"
         "./configure --prefix=${pcre_ins_prefix}"
         "make"
