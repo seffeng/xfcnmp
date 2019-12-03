@@ -126,8 +126,8 @@ misc_mod_pack_folder="set-misc-nginx-module-0.32";
 ngx_devel_kit_pack_folder="ngx_devel_kit-0.3.1";
 redis_mod_pack_folder="redis2-nginx-module-0.15";
 
-php_pack_folder="php-7.1.33";
-php_version="7.1"
+php_pack_folder="php-7.3.12";
+php_version="7.3"
 libmcrypt_pack_folder="libmcrypt-2.5.8";
 mcrypt_pack_folder="mcrypt-2.6.8";
 mhash_pack_folder="mhash-0.9.9.9";
