@@ -31,6 +31,7 @@ function fun_ins_nginx(){
         "tar -zxf ${lua_resty_core_pack_name}"
         "cd ${lua_resty_core_pack_folder}"
         "make install"
+        "mkdir -p /usr/local/share/lua/5.1"
         "if [ -f /usr/local/share/lua/5.1/resty ] ; then (rm -rf /usr/local/share/lua/5.1/resty) fi"
         "ln -s /usr/local/lib/lua/resty/ /usr/local/share/lua/5.1/resty"
         "if [ -f /usr/local/share/lua/5.1/ngx ] ; then (rm -rf /usr/local/share/lua/5.1/ngx) fi"
