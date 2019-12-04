@@ -109,6 +109,19 @@ ins_redis=0;
 ins_zlib=0;
 is_debug=1;    #是否调试模式[1-是,0-否]
 
+##------------------------------------------------------------------------------
+println "********************************************************************************" yellow;
+println "CONFIGURE CENTOS SERVER";
+println "********************************************************************************\n" yellow;
+shl_cmd="yum -y install gcc gcc-c++ make bzip2";
+url_software_base="/srv/websrv/source/";        ## 安装程序路径
+url_install_base="/srv/websrv/program/";        ## 安装结果路径
+url_config_base="/srv/websrv/config/";          ## 配置文件路径
+url_data_base="/srv/websrv/data/";              ## 安装数据路径
+url_sbin_base="/usr/bin/";                      ## 系统执行命令路径
+url_path_base=$(dirname $url_install_base)/;    ## 安装程序根目录
+to_argv;
+
 ##软件名称和源码路径,更新软件版本时修改此处-------------------------------------
 cmake_pack_folder="cmake-3.16.0";
 libzip_pack_folder="libzip-1.5.2";
@@ -121,13 +134,15 @@ mysql_pack_folder="mysql-5.7.28";
 
 nginx_pack_folder="nginx-1.16.1";
 lua_mod_pack_folder="lua-nginx-module-0.10.15";
-luajit_pack_folder="LuaJIT-2.0.5";
+luajit_pack_folder="luajit2-2.1-20190912";
+lua_resty_core_pack_folder="lua-resty-core-0.1.17";
+lua_resty_lrucache_pack_folder="lua-resty-lrucache-0.09";
 misc_mod_pack_folder="set-misc-nginx-module-0.32";
 ngx_devel_kit_pack_folder="ngx_devel_kit-0.3.1";
 redis_mod_pack_folder="redis2-nginx-module-0.15";
 
 php_pack_folder="php-7.3.12";
-php_version="7.3"
+php_version="7.3";
 libmcrypt_pack_folder="libmcrypt-2.5.8";
 mcrypt_pack_folder="mcrypt-2.6.8";
 mhash_pack_folder="mhash-0.9.9.9";
@@ -147,6 +162,8 @@ mysql_pack_name="${boost_pack_folder}.tar.gz";
 nginx_pack_name="${nginx_pack_folder}.tar.gz";
 lua_mod_pack_name="${lua_mod_pack_folder}.tar.gz";
 luajit_pack_name="${luajit_pack_folder}.tar.gz";
+lua_resty_lrucache_pack_name="${lua_resty_lrucache_pack_folder}.tar.gz";
+lua_resty_core_pack_name="${lua_resty_core_pack_folder}.tar.gz";
 misc_mod_pack_name="${misc_mod_pack_folder}.tar.gz";
 ngx_devel_kit_pack_name="${ngx_devel_kit_pack_folder}.tar.gz";
 redis_mod_pack_name="${redis_mod_pack_folder}.tar.gz";
@@ -162,19 +179,6 @@ mhash_pack_name="${mhash_pack_folder}.tar.gz";
 ## REDIS 模块---------------
 redis_pack_name="${redis_pack_folder}.tar.gz";
 ## / REDIS 模块---------------
-
-##------------------------------------------------------------------------------
-println "********************************************************************************" yellow;
-println "CONFIGURE CENTOS SERVER";
-println "********************************************************************************\n" yellow;
-shl_cmd="yum -y install gcc gcc-c++ make bzip2";
-url_software_base="/srv/websrv/source/";        ## 安装程序路径
-url_install_base="/srv/websrv/program/";        ## 安装结果路径
-url_config_base="/srv/websrv/config/";          ## 配置文件路径
-url_data_base="/srv/websrv/data/";              ## 安装数据路径
-url_sbin_base="/usr/bin/";                      ## 系统执行命令路径
-url_path_base=$(dirname $url_install_base)/;    ## 安装程序根目录
-to_argv;
 
 if [ 1 = $ins_mysql ]; then
 ins_cmake=1;

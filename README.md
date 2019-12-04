@@ -24,7 +24,11 @@ redis-5.0.7
 
 [libzip-1.5.2.tar.gz](https://libzip.org/download/libzip-1.5.2.tar.gz)
 
-[LuaJIT-2.0.5.tar.gz](https://github.com/LuaJIT/LuaJIT)
+[luajit2-2.1-20190912](https://github.com/openresty/luajit2)
+
+[lua-resty-core-0.1.17](https://github.com/openresty/lua-resty-core)
+
+[lua-resty-lrucache-0.09](https://github.com/openresty/lua-resty-lrucache)
 
 [lua-nginx-module-0.10.15.tar.gz](https://github.com/openresty/lua-nginx-module)
 
@@ -93,7 +97,7 @@ $ sudo /srv/websrv/config/redis/start.sh
 $ sudo /srv/websrv/config/redis/stop.sh
    ```
 
-#### 9、MySQL账号：root；密码：空 或 root。
+#### 9、MySQL账号：root；密码：空；注意及时修改。
 
 ```shell
 # 请自行修改密码：
@@ -101,15 +105,15 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 flush privileges;
 ```
 
-#### 10、php-fpm 启动、停止、重载模版，启动php前请注意修改 /srv/websrv/config/php/php-fpm.conf。
+#### 10、php-fpm 启动、停止、重载模版，启动 php 前请注意修改 /srv/websrv/config/php/7.3/php-fpm.conf。
 
 ```shell
-$ sudo /srv/websrv/config/php/start.sh
-$ sudo /srv/websrv/config/php/stop.sh
-$ sudo /srv/websrv/config/php/reload.sh
+$ sudo /srv/websrv/config/php/7.3/start.sh
+$ sudo /srv/websrv/config/php/7.3/stop.sh
+$ sudo /srv/websrv/config/php/7.3/reload.sh
 ```
 
-#### 11、总启动脚本。
+#### 11、总启动脚本模板，注意修改 php 版本。
 
 ```shell
 $ sudo /srv/websrv/config/start_websrv.sh
