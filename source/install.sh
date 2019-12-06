@@ -119,8 +119,8 @@ url_install_base="/srv/websrv/program/";        ## 安装结果路径
 url_config_base="/srv/websrv/config/";          ## 配置文件路径
 url_data_base="/srv/websrv/data/";              ## 安装数据路径
 url_sbin_base="/usr/bin/";                      ## 系统执行命令路径
-url_path_base=$(dirname $url_install_base)/;    ## 安装程序根目录
 to_argv;
+url_path_base="$(dirname $url_install_base)/";  ## 安装程序根目录
 
 ##软件名称和源码路径,更新软件版本时修改此处-------------------------------------
 cmake_pack_folder="cmake-3.16.0";
