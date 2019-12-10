@@ -48,6 +48,8 @@ redis-5.0.7
 
 [php-7.3.12.tar.gz](https://www.php.net/downloads.php)
 
+[phpredis-5.1.1.tar.gz](https://github.com/phpredis/phpredis)
+
 [redis2-nginx-module-0.15.tar.gz](https://github.com/openresty/redis2-nginx-module)
 
 [redis-5.0.7.tar.gz](http://download.redis.io/releases/redis-5.0.7.tar.gz)
@@ -129,7 +131,9 @@ $ sudo /srv/websrv/config/stop_websrv.sh
 
 ​    13.3 mysql 需下载 mysql-boost 版本，同时修改 install.sh 里的 boost_pack_folder 和 mysql_pack_folder；
 
-​	13.4 php 支持5.6，7.1，7.2，7.3；暂不支持7.4，同时修改 install.sh 里的 php_pack_folder 和 php_version。
+​    13.4 php 支持 5.6，7.1，7.2，7.3；暂不支持7.4，同时修改 install.sh 里的 php_pack_folder 和 php_version；
+
+​    13.5 安装 php5.6 时，扩展 phpredis 请下载 4.3.0 版本。
 
 #### 14、更多版本[下载](https://pan.baidu.com/s/1i5PA2yT)
 

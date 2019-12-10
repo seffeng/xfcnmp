@@ -105,6 +105,7 @@ ins_nginx=0;
 ins_openssl=0;
 ins_pcre=0;
 ins_php=0;
+ins_php_redis=0;
 ins_redis=0;
 ins_zlib=0;
 is_debug=1;    #是否调试模式[1-是,0-否]
@@ -143,6 +144,7 @@ redis_mod_pack_folder="redis2-nginx-module-0.15";
 
 php_pack_folder="php-7.3.12";
 php_version="7.3";
+php_redis_pack_folder="phpredis-5.1.1";
 libmcrypt_pack_folder="libmcrypt-2.5.8";
 mcrypt_pack_folder="mcrypt-2.6.8";
 mhash_pack_folder="mhash-0.9.9.9";
@@ -171,6 +173,7 @@ redis_mod_pack_name="${redis_mod_pack_folder}.tar.gz";
 
 ## PHP 模块---------------
 php_pack_name="${php_pack_folder}.tar.gz";
+php_redis_pack_name="${php_redis_pack_folder}.tar.gz";
 libmcrypt_pack_name="${libmcrypt_pack_folder}.tar.gz";
 mcrypt_pack_name="${mcrypt_pack_folder}.tar.gz";
 mhash_pack_name="${mhash_pack_folder}.tar.gz";
@@ -200,6 +203,7 @@ ins_mhash=1;
 ins_openssl=1;
 ins_pcre=1;
 ins_zlib=1;
+ins_php_redis=1;
 fi
 
 if [ 1 = $ins_libzip ]; then
@@ -310,6 +314,12 @@ fi
 if [ 1 = $ins_redis ]; then
 . ${url_software_base}fun/fun_ins_redis.sh;
 fun_ins_redis;
+fi
+
+#安装PHP_REDIS
+if [ 1 = $ins_php_redis ]; then
+. ${url_software_base}fun/fun_ins_php_redis.sh;
+fun_ins_php_redis;
 fi
 
 println "================================================================================" yellow;
